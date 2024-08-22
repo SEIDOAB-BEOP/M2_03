@@ -17,14 +17,18 @@ namespace BOOP_03_08
             Console.WriteLine(matrix2[1, 2]);  // 5
 
             //Print out a matrix
+            int sum = 0;
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 for (int column = 0; column < matrix.GetLength(1); column++)
                 {
+                    sum += matrix2[row, column];
                     Console.Write($"{matrix2[row,column]},  ");
                 }
                 Console.WriteLine();
             }
+
+            Console.WriteLine(sum);
 
 
             // Initialize the array individually

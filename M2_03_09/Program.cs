@@ -9,11 +9,11 @@ namespace BOOP_03_09
             // Jagged arrays are arrays of arrays.
             // 2 dimensional jagged array
             int[][] matrix = new int[3][];                  // unitialized
-            int[][] matrix2 = { new int[] {0,1,2,3},
+            int[][] matrix2 = { new int[] {0,1,-2,3},
                                 new int[] {4,5,6,7,8,9},    // initialized
                                 new int[] {10,11}};
 
-
+/*
             // Initialize the uninitialized array
             for (int i = 0; i < matrix.Length; i++)         // notice I use Length
             {
@@ -29,7 +29,8 @@ namespace BOOP_03_09
                 for (int j = 0; j < matrix[i].Length; j++)  // notice I use matrix[i].Length
                     matrix[i][j] = i * 25 + j * 43;
             }
-            
+ */
+/*
             // Write matrix
             for (int i = 0; i < matrix.Length; i++)
             {
@@ -47,6 +48,27 @@ namespace BOOP_03_09
 
                 Console.WriteLine();
             }
+*/
+
+            //Min max
+            int maxVal = int.MinValue;
+            int minVal = int.MaxValue;
+            for (int r = 0; r < matrix2.Length; r++)
+            {
+                for (int c = 0; c < matrix2[r].Length; c++)
+                {
+                    if (matrix2[r][c] > maxVal)
+                    {
+                        maxVal = matrix2[r][c];
+                    }
+                    if (matrix2[r][c] < minVal)
+                    {
+                        minVal = matrix2[r][c];
+                    }
+                }
+            }
+            Console.WriteLine($"Maxval is: {maxVal}");
+            Console.WriteLine($"Minval is: {minVal}");
         }
     }
 }

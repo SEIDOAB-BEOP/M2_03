@@ -10,6 +10,16 @@ namespace BOOP_03_12
         }
         static void Main(string[] args)
         {
+
+            int? x1 = null;
+            x1 ??= 3;
+            Console.WriteLine(x1);
+
+            x1 = 5;
+            x1 ??= 3;
+            Console.WriteLine(x1);
+
+
             int? x = 5;             // Value 5 as type instance of int
             int? y = null;          // Undefined value
 
